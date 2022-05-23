@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- Bootstrap JavaScript libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <!-- SweetAlert2 stylesheet -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Title -->
+    <title>Coding Club - Feedback Form</title>
+</head>
+
+<body>
+    <form id="rateClubForm">
+        <div id="section1">
+            <h2 class="sectionTitle">
+                Section I: General Information
+            </h2>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+                        style="text-align: center;">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+                        style="text-align: center;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Email address" aria-label="Email address"
+                        style="text-align: center;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="button" class="btn btn-primary" onclick="changeSection(1, 2)" value="Next section"
+                        style="text-align: center;">
+                </div>
+            </div>
+        </div>
+        <div id="section2">
+            <h2 class="sectionTitle">
+                Section II: General Club Evaluation
+            </h2>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="generalEvaluation" id="loveClub">
+                <label class="form-check-label" for="loveClub">I love coding club!</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="generalEvaluation" id="mehClub">
+                <label class="form-check-label" for="mehClub">I think coding club is meh.</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="generalEvaluation" id="dontLikeClub">
+                <label class="form-check-label" for="dontLikeClub">I don't really like coding club.</label>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="button" class="btn btn-primary" onclick="changeSection(2, 3)" value="Next section"
+                        style="text-align: center;">
+                </div>
+            </div>
+        </div>
+        <div id="section3">
+            <h2 class="sectionTitle">
+                Section III: Club Meetings
+            </h2>
+            <h3 class="sectionSubtitle">
+                Part A: Club Leaders
+            </h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="clubLeaders" id="leaderAttitude">
+                <label class="form-check-label" for="leaderAttitude">The club leaders were enthusiastic!</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="clubLeaders" id="leaderBehavior">
+                <label class="form-check-label" for="leaderBehavior">The club leaders were respectful and
+                    supportive!</label>
+            </div>
+            <h3 class="sectionSubtitle">
+                Part B: My Teammates
+            </h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="clubTeammates" id="teammateAttitude">
+                <label class="form-check-label" for="clubTeammates">My teammates were enthusiastic!</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="clubTeammates" id="teammateBehavior">
+                <label class="form-check-label" for="clubTeammates">My teammates were respectful and supportive!</label>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="button" class="btn btn-primary" onclick="finishForm();" value="Finish form"
+                        style="text-align: center;">
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="rateclub.js"></script>
+</body>
+
+</html>
